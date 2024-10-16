@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class BookManagement {
 
     public static void addBook(ArrayList<Book> books) {
-        books.add(new Book())
+        books.add(new Book());
 
     }
     public static Book BookSelect(ArrayList<Book> books){
