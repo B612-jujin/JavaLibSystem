@@ -11,11 +11,7 @@ public class Main {
         SetBook(BookList.getBookLsit());
         int end = 0;
         while(end != 999){
-            switch (end){
-                case 0:
                     end = LibraryController.UserInput(BookList.getBookLsit());
-                    break;
-            }
         }
     }
 

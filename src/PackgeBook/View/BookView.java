@@ -29,6 +29,42 @@ public class BookView {
                 break;
         }
     }
+    public static void Changed(){
+        System.out.println("변경되었습니다.");
+    }
+    public static void AmendBookMsg(Book AmendBook){
+        System.out.printf("==========%s==========\n",AmendBook.getBookName());
+        System.out.printf("0번 : 종료 | 1번 : ISBN | 2번 : 책 제목 | 3번 : 저자 | 4번 : 출판사 | 5번 : 가격 | 6번 : 다른 책 수정 | 입력 : ");
+        System.out.printf("수정할 항목의 번호를 입력하시오 :");
+    }
+    public static void DeleteBookMsg(){
+        System.out.printf("지워졌습니다.\n");
+    }
+    public static void SetBookMsg(int inputInt, Book AmendBook) {
+        switch (inputInt) {
+            case 1://ISBN
+                System.out.printf("현제 ISBN의 값 : %s 변경할 값 : ", AmendBook.getIsbn().toString(), AmendBook.getIsbn());
+                break;
+            case 2://ㅔㅈ목
+                System.out.printf("책 제목 : %s 변경할 값 : ", AmendBook.getIsbn().toString(), AmendBook.getIsbn());
+                break;
+            case 3://저자
+                System.out.printf("현제 저자의 이름 : %s 변경할 값 : ", AmendBook.getIsbn().toString(), AmendBook.getIsbn());
 
+                break;
+            case 4://출판사
+                System.out.printf("현제 출판사 값 : %s 변경할 값 : ", AmendBook.getIsbn().toString(), AmendBook.getIsbn());
+                break;
+            case 5://가격
+                System.out.printf("현제 가격 : %s 변경할 값 : ", AmendBook.getIsbn().toString(), AmendBook.getIsbn());
+                break;
+            case 6://책 선택
+                System.out.printf("다른 ");
+                break;
+            case 0:
+                System.out.println("종료합니다.\n");
+                break;
 
+        }
+    }
 }
