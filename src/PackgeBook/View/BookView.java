@@ -6,11 +6,14 @@ import java.util.ArrayList;
 
 public class BookView {
     public static void ShowBook(Book book) {
+        System.out.printf("==========%s==========\n",book.getBookName());
         System.out.printf("ISBN: %s\nTitle: %s\nAuthor: %s\nPublisher:%s\nPrice: %d\n", book.getIsbn(), book.getBookName(), book.getAuthor(), book.getPublisher(), book.Price);
     }
     public static void ShowMainMenu() {
         System.out.printf("======📜LibraryManagementSystem=====\n" +
                           "| [1번] 도서정보 추가 : 새로운 도서 등록 | [2번] 도서조회 : 도서 조회 | [3번] 도서정보 수정 : 도서의 정보 수정 | [4번] 도서정보 삭제 ㅣ [5번] 도서정보 출력 : 전체 도서리스트 출력 |\n");
+        UserInputMsg();
+
     }
     public static void ViewInput(int input){
         switch (input) {

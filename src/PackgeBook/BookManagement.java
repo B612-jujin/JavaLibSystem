@@ -7,8 +7,6 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.function.Function;
 
-import static PackgeBook.View.BookView.UserInputMsg;
-
 
 public class BookManagement {
     public static ArrayList<Function> BookFunction = new ArrayList<>();
@@ -25,8 +23,9 @@ public class BookManagement {
         String publisher = sc.nextLine();
         System.out.printf("Enter the price: ");
         int price = sc.nextInt();
-        System.out.printf("ISBN: [%s]Title: [%s]\nAuthor: [%s]\nPublisher: [%s]\nPrice: [%d]\n", isbn, title, author, publisher, price);
-        BookList.add(new Book(isbn,title,author,publisher,price));
+        Book AddNewBook= new Book(isbn,title,author,publisher,price);
+        BookView.ShowBook(AddNewBook);
+        BookList.add(AddNewBook);
     }
 
     public static Book BookSelect(ArrayList<Book> BookList) {
@@ -54,7 +53,6 @@ public class BookManagement {
         if(AmendBook == null){return;}
         BookView.AmendBookMsg(AmendBook);
         if (sc.hasNext()) {
-            UserInputMsg();
             inputInt = sc.nextInt();
         } else {//디버깅용
             System.out.println("No more elements");
