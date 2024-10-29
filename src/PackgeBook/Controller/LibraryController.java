@@ -31,7 +31,7 @@ public class LibraryController {
                 BookManagement.DeleteBook(BookList);
                 return 0;
             case 5://도서정보 출력
-                BookManagement.ShowBookList(BookList);
+                BookView.ShowBookList(BookList);
                 return 0;
             default:
                 return 999;

@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.function.Function;
 
+import static PackgeBook.View.BookView.UserInputMsg;
 
 
 public class BookManagement {
@@ -24,7 +25,7 @@ public class BookManagement {
         String publisher = sc.nextLine();
         System.out.printf("Enter the price: ");
         int price = sc.nextInt();
-        System.out.printf("ISBN: %s\nTitle: %s\nAuthor: %s\nPublisher:%s\nPrice: %d\n", isbn, title, author, publisher, price);
+        System.out.printf("ISBN: [%s]Title: [%s]\nAuthor: [%s]\nPublisher: [%s]\nPrice: [%d]\n", isbn, title, author, publisher, price);
         BookList.add(new Book(isbn,title,author,publisher,price));
     }
 
@@ -49,14 +50,13 @@ public class BookManagement {
         if (end == 0){
             AmendBook = BookSelect(BookList);
             end = 1;
-
         }
         if(AmendBook == null){return;}
         BookView.AmendBookMsg(AmendBook);
         if (sc.hasNext()) {
+            UserInputMsg();
             inputInt = sc.nextInt();
-            // thirdElement 사용
-        } else {
+        } else {//디버깅용
             System.out.println("No more elements");
         }
 
@@ -103,13 +103,6 @@ public class BookManagement {
         BookView.DeleteBookMsg();
     }
 
-    public static void ShowBookList(ArrayList<Book> BookList) {//나중에 VIEW로 옮기기
-        for (int i =0; i<BookList.size(); i++) {
-            System.out.printf("[%s] 에 대한 정보 = | ISBN: %s | 제목 : %s | 저자 : %s | 출판사 : %s | 가격 : %d |\n",
-                    BookList.get(i).getBookName(),BookList.get(i).getIsbn(),BookList.get(i).getBookName(),BookList.get(i).getAuthor(),BookList.get(i).getPublisher(),BookList.get(i).Price);
-
-        }
-    }
 }
 
 

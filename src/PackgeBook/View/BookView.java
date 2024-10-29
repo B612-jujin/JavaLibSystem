@@ -2,6 +2,8 @@ package PackgeBook.View;
 import PackgeBook.Book;
 import PackgeBook.BookManagement;
 
+import java.util.ArrayList;
+
 public class BookView {
     public static void ShowBook(Book book) {
         System.out.printf("ISBN: %s\nTitle: %s\nAuthor: %s\nPublisher:%s\nPrice: %d\n", book.getIsbn(), book.getBookName(), book.getAuthor(), book.getPublisher(), book.Price);
@@ -64,6 +66,16 @@ public class BookView {
             case 0:
                 System.out.println("종료합니다.\n");
                 break;
+
+        }
+    }
+    public static void UserInputMsg(){
+        System.out.println("원하시는 서비스의 번호를 입력하세요: ");
+    }
+    public static void ShowBookList(ArrayList<Book> BookList) {//나중에 VIEW로 옮기기
+        for (int i =0; i<BookList.size(); i++) {
+            System.out.printf("[%s] 에 대한 정보 = | ISBN: %s | 제목 : %s | 저자 : %s | 출판사 : %s | 가격 : %d |\n",
+                    BookList.get(i).getBookName(),BookList.get(i).getIsbn(),BookList.get(i).getBookName(),BookList.get(i).getAuthor(),BookList.get(i).getPublisher(),BookList.get(i).Price);
 
         }
     }
