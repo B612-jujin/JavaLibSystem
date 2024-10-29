@@ -1,4 +1,4 @@
-package PackgeBook;
+package PackgeBook.Model;
 
 public class Book {
 

@@ -1,5 +1,6 @@
 package PackgeBook;
 
+import PackgeBook.Model.Book;
 import PackgeBook.View.BookView;
 
 import java.util.ArrayList;

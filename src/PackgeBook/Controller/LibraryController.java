@@ -1,7 +1,6 @@
 package PackgeBook.Controller;
 
-import PackgeBook.Book;
-import PackgeBook.BookList;
+import PackgeBook.Model.Book;
 import PackgeBook.BookManagement;
 import PackgeBook.View.BookView;
 
